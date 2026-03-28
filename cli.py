@@ -1,5 +1,5 @@
 while True:
-
+    
     print("number analyzer")
     print("1.analyzer number")
     print("2.exit")
@@ -15,9 +15,10 @@ while True:
         even_count = 0 
         odd_count = 0 
         largest = 0
+        smallest = 0
 
-        temp = num ## just to keep original number 
-                   #safe this i learnt from my past small project
+        temp = num ## just to keep original number safe
+                   # this i learnt from my past small project
 
         while temp > 0:
 
@@ -33,7 +34,10 @@ while True:
                 odd_count += 1 
 
             if last > largest:
-                largest = last  
+                largest = last
+            else:
+                smallest = last
+                
 
             temp = temp // 10 
 
@@ -43,6 +47,9 @@ while True:
         print("Even:", even_count)
         print("Odd:", odd_count)
         print("Largest digit:", largest)
+        print("smallest digit:", smallest)
+
+        break
 
     elif choice == "2":
         print("exiting")
