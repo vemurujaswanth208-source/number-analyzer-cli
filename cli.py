@@ -16,12 +16,13 @@ while True:
         odd_count = 0 
         largest = 0
         smallest = 0
-
+        rev = 0
+        
         temp = num ## just to keep original number safe
                    # this i learnt from my past small project
 
         while temp > 0:
-
+        
             last = temp % 10
 
             digits += 1
@@ -38,7 +39,9 @@ while True:
             else:
                 smallest = last
                 
-
+            rev = rev * 10 + last
+            num = num // 10
+            
             temp = temp // 10 
 
         print("\nResults:")
@@ -48,6 +51,7 @@ while True:
         print("Odd:", odd_count)
         print("Largest digit:", largest)
         print("smallest digit:", smallest)
+        print("reverse of the digits:", rev)
 
         break
 
